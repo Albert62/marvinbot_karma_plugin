@@ -53,12 +53,12 @@ class KarmaPlugin(Plugin):
 
         if message.from_user.id == message.reply_to_message.from_user.id:
             self.adapter.bot.sendMessage(chat_id=message.chat_id,
-                                 text="❌ Not possible.")
+                                 text="❌ You can't upvote yourself. #TeamAbo.")
             return
 
         if not message.from_user.username:
             self.adapter.bot.sendMessage(chat_id=message.chat_id,
-                                 text="❌ You must set your username first to use this feature.")
+                                 text="❌ You must set a username first to use this feature.")
             return
 
         if not message.reply_to_message.from_user.username:
@@ -90,12 +90,12 @@ class KarmaPlugin(Plugin):
 
         if message.from_user.id == message.reply_to_message.from_user.id:
             self.adapter.bot.sendMessage(chat_id=message.chat_id,
-                                 text="❌ Not possible.")
+                                 text="❌ You can't downvote yourself. #TeamAbo.")
             return
 
         if not message.from_user.username:
             self.adapter.bot.sendMessage(chat_id=message.chat_id,
-                                 text="❌ You must set your username first to use this feature.")
+                                 text="❌ You must set a username first to use this feature.")
             return
 
         if not message.reply_to_message.from_user.username:
